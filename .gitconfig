@@ -1,0 +1,6 @@
+[user]
+	email = simetra@simetra.dev
+	name = Simetraa
+	signingkey = F018906C77AB430F
+[commit]
+	gpgsign = true
