@@ -1,13 +1,10 @@
 #!/usr/bin/env bash
 
-./uninstall.sh
-
 echo Installing symlinks to dotfiles...
 
-ln -sv "$(pwd)/.bash_aliases ~/.bash_aliases"
-ln -sv "$(pwd)/.gitconfig ~/.gitconfig"
-ln -sv "$(pwd)/.profile ~/.profile"
-
+ln -svf $(pwd)/.bash_aliases ~/.bash_aliases
+ln -svf $(pwd)/.gitconfig ~/.gitconfig
+ln -svf $(pwd)/.profile ~/.profile
 
 echo Installing pubkeys...
 
