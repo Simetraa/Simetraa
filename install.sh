@@ -17,4 +17,5 @@ ssh-import-id-gh $GITHUB_USERNAME
 
 echo Installing packages...
 
-sudo apt install w3m w3m-img tree exa gh screen dirmngr htop --yes
+sudo apt install ssh git w3m w3m-img tree snap screen dirmngr htop --yes
+sudo snap install gh exa
