@@ -20,7 +20,7 @@ me.wave()
 
  ## Installing my dotfile
 ```bash
-git clone git@github.com:Simetraa/Simetraa.git ~/.dotfiles
+git clone https://github.com/Simetraa/Simetraa.git ~/.dotfiles
 cd ~/.dotfiles
 ./install.sh
 ```
