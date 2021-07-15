@@ -1,7 +1,7 @@
 # Hi there!
 
 
-<img align="right" width="200" height="200" src="https://github.com/Simetraa.png">
+<img align="right" width="248" height="248" src="https://github.com/Simetraa.png">
 
 ```javascript
 class Artemis {
@@ -18,9 +18,94 @@ let me = new Artemis()
 me.wave()
 ```
 
+
  ## Installing my dotfile
 ```bash
 git clone https://github.com/Simetraa/Simetraa.git ~/.dotfiles
 cd ~/.dotfiles
 ./install.sh
 ```
+<details>
+<summary>My GPG key</summary>
+
+```
+-----BEGIN PGP PUBLIC KEY BLOCK-----
+
+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
+FyFH0ns=
+=V8YO
+-----END PGP PUBLIC KEY BLOCK-----
+```
+
+</details>
