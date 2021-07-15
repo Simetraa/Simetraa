@@ -1,7 +1,7 @@
 # Hi there!
 
 
-<img align="right" width="248" height="248" src="https://github.com/Simetraa.png">
+<img align="right" width="236" height="236" src="https://github.com/Simetraa.png">
 
 ```javascript
 class Artemis {
