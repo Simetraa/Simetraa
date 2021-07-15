@@ -8,7 +8,7 @@ ln -svf $(pwd)/.profile ~/.profile
 
 echo Installing packages...
 
-sudo apt install ssh-import-id-gh: ssh git w3m w3m-img tree snap screen dirmngr htop --yes
+sudo apt install ssh-import-id ssh git w3m w3m-img tree snap screen dirmngr htop --yes
 sudo snap install gh exa
 
 echo Installing pubkeys...
@@ -16,3 +16,21 @@ echo Installing pubkeys...
 gpg --keyserver keyserver.ubuntu.com --recv FEF981DF2ABB975C
 GITHUB_USERNAME="Simetraa"
 ssh-import-id-gh $GITHUB_USERNAME
+
+while true; do
+read -p "Is this a desktop installation? [Y/N] " -n 1 -r
+echo
+if [[ $REPLY =~ ^[Yy]$ ]]
+then
+        wget -O /tmp/discord.deb "https://discordapp.com/api/download?platform=linux&format=deb"
+        sudo apt install /tmp/discord.deb
+        sudo snap install authy
+        sudo apt install seahorse
+        break
+elif [[ $REPLY =~ [Nn]$  ]]
+then
+        break
+else
+    echo Invalid response
+fi
+done
