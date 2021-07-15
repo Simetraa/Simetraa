@@ -5,11 +5,13 @@ echo Installing symlinks to dotfiles...
 ln -svf $(pwd)/.bash_aliases ~/.bash_aliases
 ln -svf $(pwd)/.gitconfig ~/.gitconfig
 ln -svf $(pwd)/.profile ~/.profile
+ln -svf $(pwd)/.bashrc ~/.bashrc
+
 
 echo Installing packages...
 
-sudo apt install ssh-import-id ssh git w3m w3m-img tree snap screen dirmngr htop --yes
-sudo snap install gh exa
+sudo apt install nano ssh-import-id ssh git w3m w3m-img tree snap screen dirmngr htop udisks2 eject bash python3-pip --yes
+pip install howdoi
 
 echo Installing pubkeys...
 
