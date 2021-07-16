@@ -5,3 +5,5 @@ alias exa=~/.dotfiles/bin/exa
 alias ping=~/.dotfiles/bin/prettyping
 alias bashmount=~/.dotfiles/bin/bashmount
 alias untar="tar -xvf"
+alias soundcloud_dl="youtube-dl -o '%(uploader)s/%(title)s.%(ext)s'"
+alias bandcamp_dl="youtube-dl -o '%(artist)s/%(album)s/%(title)s.%(ext)s' --output-na-placeholder Singles"
