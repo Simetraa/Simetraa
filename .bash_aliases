@@ -7,3 +7,5 @@ alias bashmount=~/.dotfiles/bin/bashmount
 alias untar="tar -xvf"
 alias soundcloud_dl="youtube-dl -o '%(uploader)s/%(title)s.%(ext)s'"
 alias bandcamp_dl="youtube-dl -o '%(artist)s/%(album)s/%(title)s.%(ext)s' --output-na-placeholder Singles"
+alias spotdl="spotdl --output-format m4a"
+alias pubip="dig +short myip.opendns.com @resolver1.opendns.com"
