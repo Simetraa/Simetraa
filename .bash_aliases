@@ -9,6 +9,6 @@ alias soundcloud_dl="youtube-dl -o '%(uploader)s/%(title)s.%(ext)s'"
 alias bandcamp_dl="youtube-dl -o '%(artist)s/%(album)s/%(title)s.%(ext)s' --output-na-placeholder Singles"
 alias spotdl="spotdl --output-format m4a"
 alias pubip="dig +short myip.opendns.com @resolver1.opendns.com"
-alias chrome=google-chrome
+alias chrome=google-chrome||google-chrome-stable
 alias reload="source ~/.bashrc"
 alias rld=reload
