@@ -10,7 +10,7 @@ ln -svf $(pwd)/.bashrc ~/.bashrc
 
 echo Installing packages...
 
-sudo apt install nano ssh-import-id ssh git w3m w3m-img tree snap screen dirmngr htop udisks2 eject bash python3-pip ffmpeg --yes
+sudo apt install nano ssh-import-id ssh git w3m w3m-img tree snap screen dirmngr htop udisks2 eject bash python3-pip ffmpeg cifs-utils --yes
 pip install howdoi spotdl
 
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
