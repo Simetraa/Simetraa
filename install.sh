@@ -22,8 +22,8 @@ GITHUB_USERNAME="Simetraa"
 ssh-import-id-gh $GITHUB_USERNAME
 
 while true; do
-read -p "Is this a desktop installation? [Y/N] " -n 1 -r
-echo
+echo -e "\033[31mIs this a desktop installation? [Y/N]\e[0m"
+read -n 1 -r
 if [[ $REPLY =~ ^[Yy]$ ]]
 then
         wget -O /tmp/chrome.deb "https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb"
