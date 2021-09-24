@@ -1,44 +1,45 @@
 #!/usr/bin/env bash
 
-echo Installing symlinks to dotfiles...
+echo Installing fish shell
 
-ln -svf $(pwd)/.bash_aliases ~/.bash_aliases
-ln -svf $(pwd)/.gitconfig ~/.gitconfig
-ln -svf $(pwd)/.profile ~/.profile
-ln -svf $(pwd)/.bashrc ~/.bashrc
+sudo apt install software-properties-common
+sudo apt-add-repository ppa:fish-shell/release-3 --yes
+sudo apt update
+sudo apt --yes install fish 
 
+echo Type your password to set the default shell.
+
+# Set default shell to fish
+chsh -s /usr/bin/fish
+mkdir ~/.config
+
+# See https://stackoverflow.com/a/246128
+SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
+
+ln -svf $SCRIPT_DIR/fish ~/.config
+ln -svf $SCRIPT_DIR/.gitconfig ~/.gitconfig
 
 echo Installing packages...
 
-sudo apt install nano ssh-import-id ssh git w3m w3m-img tree snap screen dirmngr htop udisks2 eject bash python3-pip ffmpeg cifs-utils --yes
-pip install howdoi spotdl
+sudo apt --yes install python-is-python3 nano ssh-import-id ssh git tree snap screen dirmngr htop udisks2 eject bash python3-pip ffmpeg cifs-utils --yes
 
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
+echo Installing python packages...
+
+sudo apt --yes install python3-testresources python3-pip
+pip install spotdl howdoi
+# Downgrade requests - we need a certain version.
+pip3 install requests>=2.25.0 -U
 
 echo Installing pubkeys...
 
 gpg --keyserver keyserver.ubuntu.com --recv FEF981DF2ABB975C
-GITHUB_USERNAME="Simetraa"
-ssh-import-id-gh $GITHUB_USERNAME
+set GITHUB_USERNAME "Simetraa"
 
-while true; do
-echo -e "\033[31mIs this a desktop installation? [Y/N]\e[0m"
-read -n 1 -r
-if [[ $REPLY =~ ^[Yy]$ ]]
+if [ $(uname -r | sed -n 's/.*\( *Microsoft *\).*/\1/ip') ];
 then
-        wget -O /tmp/chrome.deb "https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb"
-        sudo apt install /tmp/chrome.deb
-        wget -O /tmp/code.deb "https://code.visualstudio.com/sha/download?build=stable&os=linux-deb-x64"
-        sudo apt install /tmp/code.deb
-        wget -O /tmp/discord.deb "https://discordapp.com/api/download?platform=linux&format=deb"
-        sudo apt install /tmp/discord.deb
-        sudo snap install authy
-        sudo apt install seahorse
-        break
-elif [[ $REPLY =~ [Nn]$  ]]
-then
-        break
+        echo TODO: Implement windows install scripts.
 else
-    echo Invalid response
+        ./install_linux.sh
 fi
-done
+
+
