@@ -28,7 +28,7 @@ echo Installing python packages...
 sudo apt --yes install python3-testresources python3-pip
 pip install spotdl howdoi
 # Downgrade requests - we need a certain version.
-pip3 install requests>=2.25.0 -U
+pip3 install "requests>=2.25.0" -U
 
 echo Installing pubkeys...
 
