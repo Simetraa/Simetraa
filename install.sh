@@ -26,7 +26,7 @@ sudo apt --yes install python-is-python3 nano ssh-import-id ssh git tree snap sc
 echo Installing python packages...
 
 sudo apt --yes install python3-testresources python3-pip
-pip install spotdl howdoi
+pip3 install spotdl howdoi
 # Downgrade requests - we need a certain version.
 pip3 install "requests>=2.25.0" -U
 
