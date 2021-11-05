@@ -10,7 +10,7 @@ sudo apt --yes install fish
 echo Type your password to set the default shell.
 
 # Set default shell to fish
-sudo chsh -s /usr/bin/fish
+chsh -s /usr/bin/fish
 mkdir ~/.config
 
 # See https://stackoverflow.com/a/246128
