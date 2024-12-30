@@ -6,7 +6,7 @@
 ```javascript
 class Artemis {
     name = "Artemis"
-    age = 19
+    age = 22
     pronouns = "she/her"
     languages = ["python", "go", "javascript", "typescript", "bash"]
     wave() {
