@@ -8,7 +8,7 @@ class Artemis {
     name = "Artemis"
     age = 22
     pronouns = "she/her"
-    languages = ["python", "go", "javascript", "typescript", "bash"]
+    languages = ["python", "c#", "php", "go", "javascript", "typescript", "bash"]
     wave() {
         console.log(`Hi there! I'm ${this.name} 👋`)
     }
